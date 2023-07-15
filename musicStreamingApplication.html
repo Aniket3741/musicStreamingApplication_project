@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Streaming Application</title>
+    <style>
+        /* CSS styling for the music player */
+        .player {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Music Streaming Application</h1>
+
+    <div class="player">
+        <audio id="audioPlayer" controls></audio>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+    </div>
+
+    <h2>Song List</h2>
+    <ul id="songList">
+        <li><a href="#" onclick="loadSong('song1.mp3')">Song 1</a></li>
+        <li><a href="#" onclick="loadSong('song2.mp3')">Song 2</a></li>
+        <li><a href="#" onclick="loadSong('song3.mp3')">Song 3</a></li>
+    </ul>
+
+    <script>
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        function loadSong(songUrl) {
+            audioPlayer.src = songUrl;
+        }
+
+        function play() {
+            audioPlayer.play();
+        }
+
+        function pause() {
+            audioPlayer.pause();
+        }
+    </script>
+</body>
+
+</html>
